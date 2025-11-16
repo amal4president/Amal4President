@@ -7,69 +7,139 @@
 
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1.1">
+  <link rel="stylesheet" href="styles.css?v=1.7">
 </head>
 <body>
   <main class="page">
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+      <button id="translateBtn" class="translate-btn">Français</button>
+    </div>
+
     <!-- HERO / header -->
     <header class="hero">
       <div class="hero-inner">
         <div class="hero-left">
-          <div class="vote-tag">VOTE FOR</div>
+          <div class="vote-tag" data-en="VOTE FOR" data-fr="VOTEZ POUR">VOTE FOR</div>
           <h1 class="name">AMAL DEIS</h1>
-          <div class="sub">DGSS PRESIDENT</div>
+          <div class="sub" data-en="DGSS PRESIDENT" data-fr="PRÉSIDENTE DGSS">DGSS PRESIDENT</div>
         </div>
 
         <div class="hero-right">
           <img src="assets/crest.png" alt="McGill crest" class="crest">
-          <div class="voting-dates">Voting: November 21 to 26</div>
+          <div class="voting-dates" data-en="Voting: November 21 to 26" data-fr="Votez : 21 au 26 novembre">Voting: November 21 to 26</div>
         </div>
       </div>
     </header>
 
+    <!-- Debate Banner -->
+    <section class="debate-banner">
+      <div class="debate-content">
+        <h3 data-en="🎤 Presidential Debate" data-fr="🎤 Débat Présidentiel">🎤 Presidential Debate</h3>
+        <p><strong data-en="Friday, November 21, 6:00PM-7:00PM" data-fr="Vendredi 21 novembre, 18h00-19h00">Friday, November 21, 6:00PM-7:00PM</strong></p>
+        <p data-en="Join the online debate and submit your questions for the candidates" data-fr="Rejoignez le débat en ligne et soumettez vos questions aux candidats">Join the online debate and submit your questions for the candidates</p>
+        
+        <div class="debate-buttons">
+          <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MTBmMDQ4NTAtZjdkMC00MzI4LWIxOTYtNmYwOTA0NWU0ZDQx%40thread.v2/0?context=%7b%22Tid%22%3a%22cd319671-52e7-4a68-afa9-fcf8f89f09ea%22%2c%22Oid%22%3a%22786b4506-5c14-4f27-b06c-9b9f9c52b3f9%22%7d" 
+             class="debate-btn" target="_blank">
+            <span class="icon"><img src="assets/teams.png" alt="Teams" class="teams-icon"></span>
+            <span data-en="Join Debate on Teams" data-fr="Rejoindre le débat sur Teams">Join Debate on Teams</span>
+          </a>
+          
+          <a href="https://forms.office.com/pages/responsepage.aspx?id=cZYxzedSaEqvqfz4-J8J6h8xHCrAJCpLv8lq3J_j9iVUQVBQMFNIVUtDUFVCSVBUSThIM1lERkQ1RCQlQCN0PWcu&route=shorturl" 
+             class="questions-btn" target="_blank">
+            <span class="icon">❓</span>
+            <span data-en="Submit Questions" data-fr="Soumettre des questions">Submit Questions</span>
+          </a>
+          
+          <div class="calendar-dropdown">
+            <button class="calendar-btn" id="calendarToggle">
+              <span class="icon">📅</span>
+              <span data-en="Add to Calendar" data-fr="Ajouter au calendrier">Add to Calendar</span>
+              <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="calendar-options" id="calendarOptions">
+              <a href="#" class="calendar-option" data-calendar="google">Google Calendar</a>
+              <a href="#" class="calendar-option" data-calendar="outlook">Outlook</a>
+              <a href="#" class="calendar-option" data-calendar="apple">Apple Calendar</a>
+              <a href="#" class="calendar-option" data-calendar="ics">Download .ics file</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Content grid: About, Photo, and right column sections -->
     <section class="content-grid">
       <div class="about card">
-        <h2>About me</h2>
-        <p><strong>Hello everyone,</strong></p>
-        <p>My name is Amal Deis, and I am running to be your next DGSS President. As the MBA1 Class Representative, I made a clear promise to listen, to act, and to advocate for my cohort. I delivered on that promise. I strengthened inter-program connection, raised concerns about the barriers non-Francophone students face in recruiting, and worked to ensure that every MBA student felt supported, heard, and represented.</p>
-        <p>I am now ready to bring that same determination, focus, and follow-through to all Desautels Masters programs. Our community deserves leadership that is present, informed, and accountable. Leadership that communicates with transparency, creates meaningful collaboration across programs, and transforms student feedback into real solutions. These are the principles that guide my platform: strengthening our community, improving transparency, and expanding opportunities for everyone.</p>
-        <p>I care about making promises I can keep, and that's why I've already begun taking concrete steps on these matters (such as confirming intentions for a lounge!). As DGSS president, I know we could get even more done together. If elected, I will lead with intention, integrity, and action. I will be a President who responds to your needs, represents your voice, and delivers results you can see and feel across Desautels.</p>
-        <p><strong>Your Voice, My Action.</strong></p>
-        <p>Thank you.</p>
+        <h2 data-en="About me" data-fr="À propos de moi">About me</h2>
+        <p data-en="Hello everyone," data-fr="Bonjour à tous,">Hello everyone,</p>
+        <p data-en="My name is Amal Deis, and I am running to be your next DGSS President. As the MBA1 Class Representative, I made a clear promise to listen, to act, and to advocate for my cohort. I delivered on that promise. I strengthened inter-program connection, raised concerns about the barriers non-Francophone students face in recruiting, and worked to ensure that every MBA student felt supported, heard, and represented." data-fr="Je m'appelle Amal Deis et je me présente comme votre prochaine présidente de la DGSS. En tant que représentante de la classe MBA1, j'ai pris l'engagement clair d'écouter, d'agir et de défendre les intérêts de ma cohorte. J'ai tenu cette promesse. J'ai renforcé les connexions inter-programmes, soulevé des préoccupations concernant les barrières auxquelles sont confrontés les étudiants non francophones dans le recrutement, et travaillé pour garantir que chaque étudiant MBA se sente soutenu, entendu et représenté.">My name is Amal Deis, and I am running to be your next DGSS President. As the MBA1 Class Representative, I made a clear promise to listen, to act, and to advocate for my cohort. I delivered on that promise. I strengthened inter-program connection, raised concerns about the barriers non-Francophone students face in recruiting, and worked to ensure that every MBA student felt supported, heard, and represented.</p>
+        <p data-en="I am now ready to bring that same determination, focus, and follow-through to all Desautels Masters programs." data-fr="Je suis maintenant prête à apporter cette même détermination, concentration et suivi à tous les programmes de maîtrise de Desautels.">I am now ready to bring that same determination, focus, and follow-through to all Desautels Masters programs.</p>
+        <p data-en="Our community deserves leadership that is present, informed, and accountable. Leadership that communicates with transparency, creates meaningful collaboration across programs, and transforms student feedback into real solutions. These are the principles that guide my platform: strengthening our community, championing student voices, and boosting student opportunities for everyone at Desautels." data-fr="Notre communauté mérite un leadership présent, informé et responsable. Un leadership qui communique avec transparence, crée une collaboration significative entre les programmes et transforme les commentaires des étudiants en solutions concrètes. Ce sont les principes qui guident ma plateforme : renforcer notre communauté, défendre la voix des étudiants et stimuler les opportunités étudiantes pour tous à Desautels.">Our community deserves leadership that is present, informed, and accountable. Leadership that communicates with transparency, creates meaningful collaboration across programs, and transforms student feedback into real solutions. These are the principles that guide my platform: strengthening our community, championing student voices, and boosting student opportunities for everyone at Desautels.</p>
+        <p data-en="If elected, I will lead with intention, integrity, and action. I will be a President who responds to your needs, represents your voice, and delivers results you can see and feel across Desautels." data-fr="Si je suis élue, je dirigerai avec intention, intégrité et action. Je serai une présidente qui répond à vos besoins, représente votre voix et livre des résultats que vous pouvez voir et ressentir dans tout Desautels.">If elected, I will lead with intention, integrity, and action. I will be a President who responds to your needs, represents your voice, and delivers results you can see and feel across Desautels.</p>
+        <p><strong data-en="Your Voice, My Action." data-fr="Votre Voix, Mon Action.">Your Voice, My Action.</strong></p>
+        <p data-en="Thank you." data-fr="Merci.">Thank you.</p>
       </div>
 
       <div class="right-column">
         <div class="photo-section">
           <img src="assets/photo.jpg" alt="Amal smiling" class="lead-photo">
           <aside class="commit card">
-            <h2>Why vote for Amal?</h2>
+            <h2 data-en="Why vote for Amal?" data-fr="Pourquoi voter pour Amal?">Why vote for Amal?</h2>
             <ul>
-              <li><strong>Proven advocate:</strong> Already delivered results as MBA1 Class Rep</li>
-              <li><strong>Community-focused:</strong> Initiated inter-program events and collaboration</li>
-              <li><strong>Ready to lead:</strong> Strong relationships across programs and faculty</li>
+              <li><strong data-en="Proven advocate:" data-fr="Défenseure éprouvée:">Proven advocate:</strong> <span data-en="Already delivered results as MBA1 Class Rep" data-fr="A déjà obtenu des résultats en tant que représentante MBA1">Already delivered results as MBA1 Class Rep</span></li>
+              <li><strong data-en="Community-focused:" data-fr="Axée sur la communauté:">Community-focused:</strong> <span data-en="Initiated inter-program events and collaboration" data-fr="A initié des événements et collaborations inter-programmes">Initiated inter-program events and collaboration</span></li>
+              <li><strong data-en="Ready to lead:" data-fr="Prête à diriger:">Ready to lead:</strong> <span data-en="Strong relationships across programs and faculty" data-fr="Relations solides avec tous les programmes et facultés">Strong relationships across programs and faculty</span></li>
             </ul>
           </aside>
         </div>
       </div>
 
-      <div class="improvements card">
-        <h2><strong>What I will improve if elected</strong></h2>
-        <p>I will strengthen our community through more inter-program collaboration, amplify student voices by reaching out for feedback, and expand opportunities through career workshops, French-language support, and stronger alumni and industry ties.</p>
+      <!-- FAQ Section 1 -->
+      <div class="faq-section card">
+        <h2 data-en="What will you improve if elected?" data-fr="Qu'allez-vous améliorer si vous êtes élue?">What will you improve if elected?</h2>
+        <p data-en="I will strengthen our community through more inter-program collaboration, amplify student voices by reaching out for feedback, and expand opportunities through career workshops, French-language support, and stronger alumni and industry ties." data-fr="Je renforcerai notre communauté grâce à plus de collaboration inter-programmes, amplifierai la voix des étudiants en sollicitant leurs retours, et élargirai les opportunités grâce à des ateliers de carrière, un soutien en français et des liens renforcés avec les anciens et l'industrie.">I will strengthen our community through more inter-program collaboration, amplify student voices by reaching out for feedback, and expand opportunities through career workshops, French-language support, and stronger alumni and industry ties.</p>
         <ul>
-          <li><strong>MBA:</strong> Strengthen academic-career balance with focused groups and professional workshops</li>
-          <li><strong>MMA:</strong> Friday offs so you don't have to choose between a class or an event</li>
-          <li><strong>MMR:</strong> Increased access to alumni mentorship and retail/finance career events</li>
+          <li><strong data-en="MBA:" data-fr="MBA:">MBA:</strong> <span data-en="Strengthen academic-career balance with focused groups and professional workshops" data-fr="Renforcer l'équilibre études-carrière avec des groupes spécialisés et des ateliers professionnels">Strengthen academic-career balance with focused groups and professional workshops</span></li>
+          <li><strong data-en="MMA:" data-fr="MMA:">MMA:</strong> <span data-en="Friday offs so you don't have to choose between a class or an event" data-fr="Vendredis libres pour éviter de choisir entre un cours et un événement">Friday offs so you don't have to choose between a class or an event</span></li>
+          <li><strong data-en="MMR:" data-fr="MMR:">MMR:</strong> <span data-en="Increased access to alumni mentorship and retail/finance career events" data-fr="Accès accru au mentorat des anciens et aux événements carrière commerce/finance">Increased access to alumni mentorship and retail/finance career events</span></li>
         </ul>
       </div>
+
+      <!-- FAQ Section 2 -->
+      <div class="faq-section card">
+        <h2 data-en="What makes you the best candidate for President?" data-fr="Qu'est-ce qui fait de vous la meilleure candidate pour la présidence?">What makes you the best candidate for President?</h2>
+        <div class="faq-answer">
+          <p><strong data-en="As MBA1 Representative," data-fr="En tant que représentante MBA1,">As MBA1 Representative,</strong> <span data-en="I have shown that I can listen, advocate, and take action. I have led initiatives that built stronger connections across programs and ensured that students' voices were heard and acted upon." data-fr="j'ai démontré que je peux écouter, défendre et agir. J'ai mené des initiatives qui ont renforcé les connexions entre les programmes et assuré que la voix des étudiants soit entendue et prise en compte.">I have shown that I can listen, advocate, and take action. I have led initiatives that built stronger connections across programs and ensured that students' voices were heard and acted upon.</span></p>
+          <p><strong data-en="As a Montreal native," data-fr="En tant que Montréalaise de naissance,">As a Montreal native,</strong> <span data-en="Graduate McGill alum, and member of the McGill Dobson Network, I bring a deep understanding of our university and a strong professional network that I can leverage to create more opportunities for students." data-fr="diplômée de McGill et membre du Réseau Dobson de McGill, j'apporte une compréhension profonde de notre université et un réseau professionnel solide que je peux utiliser pour créer plus d'opportunités pour les étudiants.">Graduate McGill alum, and member of the McGill Dobson Network, I bring a deep understanding of our university and a strong professional network that I can leverage to create more opportunities for students.</span></p>
+          <p><strong data-en="I am not running on potential;" data-fr="Je ne me présente pas sur du potentiel;">I am not running on potential;</strong> <span data-en="I am running on proven leadership. My record shows that when students raise concerns, I respond and deliver results. That is the kind of visible and action-driven leadership I will bring to strengthen our community, champion student voices, and boost student opportunities." data-fr="je me présente sur un leadership éprouvé. Mon dossier montre que lorsque les étudiants soulèvent des préoccupations, je réponds et livre des résultats. C'est le genre de leadership visible et axé sur l'action que j'apporterai pour renforcer notre communauté, défendre la voix des étudiants et stimuler les opportunités étudiantes.">I am running on proven leadership. My record shows that when students raise concerns, I respond and deliver results. That is the kind of visible and action-driven leadership I will bring to strengthen our community, champion student voices, and boost student opportunities.</span></p>
+        </div>
+      </div>
+
+      <!-- FAQ Section 3 -->
+      <div class="faq-section card">
+        <h2 data-en="How will you ensure students are heard?" data-fr="Comment allez-vous vous assurer que les étudiants sont entendus?">How will you ensure students are heard?</h2>
+        <div class="faq-answer">
+          <p data-en="I believe in leadership that meets students where they are. I will not wait for students to come to me during office hours; I will go to them. My approach is to reach out directly, listen actively, and create open spaces where students feel comfortable sharing their experiences." data-fr="Je crois en un leadership qui va à la rencontre des étudiants. Je n'attendrai pas que les étudiants viennent à moi pendant les heures de bureau; j'irai vers eux. Mon approche consiste à contacter directement, écouter activement et créer des espaces ouverts où les étudiants se sentent à l'aise pour partager leurs expériences.">I believe in leadership that meets students where they are. I will not wait for students to come to me during office hours; I will go to them. My approach is to reach out directly, listen actively, and create open spaces where students feel comfortable sharing their experiences.</p>
+          <p data-en="For those who prefer privacy, I will establish simple and confidential feedback channels so that everyone can express their concerns safely. Listening means nothing without action, and action is at the core of my leadership. Every voice will be heard, valued, and reflected in DGSS decisions." data-fr="Pour ceux qui préfèrent la confidentialité, j'établirai des canaux de feedback simples et confidentiels pour que chacun puisse exprimer ses préoccupations en toute sécurité. Écouter ne signifie rien sans action, et l'action est au cœur de mon leadership. Chaque voix sera entendue, valorisée et reflétée dans les décisions de la DGSS.">For those who prefer privacy, I will establish simple and confidential feedback channels so that everyone can express their concerns safely. Listening means nothing without action, and action is at the core of my leadership. Every voice will be heard, valued, and reflected in DGSS decisions.</p>
+        </div>
+      </div>
     </section>
+
+    <!-- Comments Section -->
+    <div class="comments-section card">
+      <h2 data-en="Questions & Comments" data-fr="Questions et Commentaires">Questions & Comments</h2>
+      <p data-en="Share your thoughts and questions below:" data-fr="Partagez vos réflexions et questions ci-dessous :">Share your thoughts and questions below:</p>
+      <div class="commentbox"></div>
+    </div>
 
     <!-- Long black footer with contact details -->
     <footer class="contact-bar">
       <div class="contact-inner">
         <div class="contact-left">
-          <div class="leadline">Leadership that listens. Action that delivers.</div>
-          <div class="cta">For more info or questions, please feel free to reach out to me</div>
+          <div class="leadline" data-en="Leadership that listens. Action that delivers." data-fr="Un leadership qui écoute. Des actions qui donnent des résultats.">Leadership that listens. Action that delivers.</div>
+          <div class="cta" data-en="For more info or questions, please feel free to reach out to me" data-fr="Pour plus d'informations ou des questions, n'hésitez pas à me contacter">For more info or questions, please feel free to reach out to me</div>
           <div class="contact-info">
             <div class="contact-row">
               <span class="icon"><img src="assets/linkedin.png" alt="in" class="linkedin"></span> 
@@ -81,7 +151,7 @@
             </div>
             <div class="contact-row">
               <span class="icon">📞</span> 
-              <a href="tel:+14385018555" class="contact-link">(438) 501-8555</a> (I'm only 1 phone call away)
+              <a href="tel:+14385018555" class="contact-link">(438) 501-8555</a> <span data-en="(I'm only 1 phone call away)" data-fr="(Je ne suis qu'à un appel téléphonique)">(I'm only 1 phone call away)</span>
             </div>
           </div>
         </div>
@@ -89,5 +159,141 @@
     </footer>
 
   </main>
+
+  <script>
+    // Language toggle functionality
+    const translateBtn = document.getElementById('translateBtn');
+    let isFrench = false;
+
+    // Translate page to French
+    function translateToFrench() {
+      document.querySelectorAll('[data-en]').forEach(element => {
+        if (element.hasAttribute('data-fr')) {
+          const frenchText = element.getAttribute('data-fr');
+          element.textContent = frenchText;
+        }
+      });
+      translateBtn.textContent = 'English';
+    }
+
+    // Translate page to English
+    function translateToEnglish() {
+      document.querySelectorAll('[data-en]').forEach(element => {
+        if (element.hasAttribute('data-en')) {
+          const englishText = element.getAttribute('data-en');
+          element.textContent = englishText;
+        }
+      });
+      translateBtn.textContent = 'Français';
+    }
+
+    // Calendar dropdown toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const calendarToggle = document.getElementById('calendarToggle');
+      const calendarOptions = document.getElementById('calendarOptions');
+      const calendarDropdown = document.querySelector('.calendar-dropdown');
+
+      // Toggle dropdown on click
+      calendarToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        calendarDropdown.classList.toggle('active');
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!calendarDropdown.contains(e.target)) {
+          calendarDropdown.classList.remove('active');
+        }
+      });
+
+      // Calendar functionality
+      const eventDetails = {
+        title: 'DGSS Presidential Debate - Amal Deis',
+        description: 'Join the online presidential debate for DGSS elections. Hear from candidates and submit your questions.',
+        location: 'Online - Microsoft Teams',
+        start: '2024-11-21T18:00:00',
+        end: '2024-11-21T19:00:00',
+        timezone: 'America/Toronto'
+      };
+
+      const calendarOptionLinks = document.querySelectorAll('.calendar-option');
+      
+      // Close dropdown after selecting an option and handle calendar action
+      calendarOptionLinks.forEach(option => {
+        option.addEventListener('click', function(e) {
+          e.preventDefault();
+          calendarDropdown.classList.remove('active');
+          const calendarType = this.getAttribute('data-calendar');
+          addToCalendar(calendarType, eventDetails);
+        });
+      });
+
+      function addToCalendar(calendarType, event) {
+        const startTime = new Date(event.start).toISOString().replace(/-|:|\.\d+/g, '');
+        const endTime = new Date(event.end).toISOString().replace(/-|:|\.\d+/g, '');
+        
+        let calendarUrl = '';
+
+        switch(calendarType) {
+          case 'google':
+            calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${startTime}/${endTime}&details=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
+            break;
+          
+          case 'outlook':
+            calendarUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${encodeURIComponent(event.title)}&startdt=${event.start}&enddt=${event.end}&body=${encodeURIComponent(event.description)}&location=${encodeURIComponent(event.location)}`;
+            break;
+          
+          case 'apple':
+          case 'ics':
+            downloadICSFile(event);
+            return;
+        }
+
+        if (calendarUrl) {
+          window.open(calendarUrl, '_blank');
+        }
+      }
+
+      function downloadICSFile(event) {
+        const icsContent = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'BEGIN:VEVENT',
+          `SUMMARY:${event.title}`,
+          `DESCRIPTION:${event.description}`,
+          `LOCATION:${event.location}`,
+          `DTSTART:${new Date(event.start).toISOString().replace(/-|:|\.\d+/g, '')}`,
+          `DTEND:${new Date(event.end).toISOString().replace(/-|:|\.\d+/g, '')}`,
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\n');
+
+        const blob = new Blob([icsContent], { type: 'text/calendar' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'DGSS-Presidential-Debate.ics';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      }
+
+      // Initialize translation
+      translateBtn.addEventListener('click', function() {
+        isFrench = !isFrench;
+        
+        if (isFrench) {
+          translateToFrench();
+        } else {
+          translateToEnglish();
+        }
+      });
+    });
+  </script>
+
+  <!-- CommentBox Script -->
+  <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+  <script>commentBox('5745628160196608-proj')</script>
 </body>
 </html>
